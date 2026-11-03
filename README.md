@@ -1,102 +1,267 @@
 <div align="center">
-  <img src="images/logo.png" alt="Simple Contacts logo" width="80" height="80">
 
-  <h1>Simple Contacts</h1>
+<img src="screenshots/company-detail.png" width="0" height="0" alt=""/>
 
-  <p>A lightweight, offline-first desktop contact manager for Windows — keep people and companies organized, linked together, and easy to find.</p>
+# 📇 Simple Contacts
 
-  <p>
-    <img src="https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white" alt=".NET 8">
-    <img src="https://img.shields.io/badge/UI-WPF-0078D4?logo=windows&logoColor=white" alt="WPF">
-    <img src="https://img.shields.io/badge/platform-Windows-0078D4" alt="Platform: Windows">
-    <img src="https://img.shields.io/badge/license-MIT-green" alt="License: MIT">
-  </p>
+### یک اپلیکیشن دسکتاپ مدیریت مخاطبین و شرکت‌ها با WPF و .NET 8
+
+**تم تیره، رابط کاربری سفارشی، معماری چندلایه و پایگاه‌داده SQLite**
+
+<br/>
+
+![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![WPF](https://img.shields.io/badge/WPF-Windows%20Desktop-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-latest-239120?style=for-the-badge&logo=csharp&logoColor=white)
+![EF Core](https://img.shields.io/badge/EF%20Core-SQLite-7F52A3?style=for-the-badge&logo=sqlite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-00A4EF?style=for-the-badge&logo=windows11&logoColor=white)
+
+<br/>
+
 </div>
 
 ---
 
-## Table of Contents
+## 📖 درباره پروژه
 
-- [About](#about)
-- [Screenshots](#screenshots)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [License](#license)
+**Simple Contacts** یک اپلیکیشن دسکتاپ ویندوزی برای مدیریت **مخاطبین** و **شرکت‌ها** است که با **WPF** و **.NET 8** ساخته شده. این پروژه با معماری چندلایه (Layered Architecture) طراحی شده تا منطق داده، مدل‌ها و رابط کاربری کاملاً از هم جدا باشند، و از **Entity Framework Core** روی **SQLite** برای ذخیره‌سازی دائمی داده‌ها استفاده می‌کند.
 
-## About
+رابط کاربری با الهام از اسکرین‌شات‌های مرجع، به‌صورت **پیکسل‌به‌پیکسل** بازسازی شده: از رنگ‌های تم تیره گرفته تا آیکون‌های سایدبار، همگی مستقیماً از روی طرح اصلی نمونه‌برداری شده‌اند.
 
-Simple Contacts is a native Windows desktop app for managing contacts and companies in one place. It's built for people who want a fast, local, no-account-needed alternative to cloud-based address books — your data stays on your own machine, in your own SQLite database, and nowhere else.
+<br/>
 
-## Screenshots
+## ✨ ویژگی‌های کلیدی
 
-<p align="center">
-  <img src="images/screenshot-company.png" alt="Company detail view" width="85%"><br>
-  <sub>Company detail view — contact info, linked contacts, and notes</sub>
-</p>
-
-<p align="center">
-  <img src="images/screenshot-contact.png" alt="Contact detail view" width="85%"><br>
-  <sub>Contact detail view — multiple phones, emails, addresses, and linked companies</sub>
-</p>
-
-## Features
-
-- 👤 **Contacts & Companies** — manage both as first-class records, each with a full profile.
-- 🔗 **Two-way linking** — connect a contact to one or more companies; see the relationship from either side.
-- 📇 **Rich fields** — multiple phone numbers, emails, and addresses per record, each tagged by kind (Work, Home, Mobile, Direct, Other…).
-- 📝 **Notes** — freeform notes attached to any contact or company.
-- 🔍 **Instant search** — filter contacts and companies as you type.
-- 🔄 **Import / Export (vCard)** — bring contacts in from a standard `.vcf` file, or export your data to share or back up.
-- 💾 **Local & offline** — everything lives in a local SQLite database; no account, no cloud, no internet connection required.
-
-## Tech Stack
-
-| Layer | Technology |
+| ویژگی | توضیح |
 |---|---|
-| UI | WPF (.NET 8), [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet) |
-| Data access | Entity Framework Core 8 |
-| Database | SQLite |
-| vCard import/export | [FolkerKinzel.VCards](https://github.com/FolkerKinzel/VCards) |
+| 🧑‍🤝‍🧑 **مدیریت مخاطبین** | ثبت نام کامل (First / Middle / Last / Nickname)، چند شماره تلفن، چند ایمیل، چند آدرس و یادداشت برای هر مخاطب |
+| 🏢 **مدیریت شرکت‌ها** | ثبت نام، توضیحات، تلفن، ایمیل، آدرس و یادداشت برای هر شرکت |
+| 🔗 **لینک مخاطب ↔ شرکت** | رابطهٔ چند‌به‌چند (Many-to-Many) بین مخاطبین و شرکت‌ها با قابلیت افزودن/حذف لینک از هر دو طرف |
+| 🏷️ **انواع داده با Enum** | تلفن: `Mobile`, `Home`, `Work`, `Direct`, `Other` · ایمیل: `Personal`, `Work`, `Other` · آدرس: `Home`, `Work`, `Other` |
+| ⭐ **مقدار ترجیحی (Preferred)** | هر مخاطب/شرکت یک شمارهٔ تلفن، ایمیل و آدرس «اصلی» دارد که به‌صورت خودکار در لیست‌ها نمایش داده می‌شود |
+| 📇 **VCard Import / Export** | سرویس اختصاصی برای ورود و خروجی مخاطبین با فرمت vCard نسخهٔ `3.0` و `4.0` |
+| 🔍 **جستجوی زنده** | جستجوی آنی در لیست مخاطبین و شرکت‌ها |
+| 🖥️ **تایتل‌بار سفارشی** | نوار عنوان اختصاصی با دکمه‌های Minimize / Maximize / Close و پشتیبانی از Drag & Resize پنجره |
+| 📱 **سایدبار جمع‌شونده** | منوی کناری با انیمیشن باز و بسته شدن، هایلایت آیتم فعال و نوار آبی لبه |
+| 🔔 **اعلان Toast** | پیام تأیید شناور پس از ذخیره/حذف هر رکورد |
+| 🌙 **تم تیرهٔ یکپارچه** | تمام رنگ‌ها، کارت‌ها و استایل کنترل‌ها در یک `ResourceDictionary` مرکزی (`Theme.xaml`) |
+| 🗃️ **پایگاه‌داده SQLite + Migrations** | مدل داده با Entity Framework Core و تاریخچهٔ کامل Migration (`InitialCreate`, `AddCompanyNotes`) |
 
-## Getting Started
+<br/>
 
-### Prerequisites
+## 🖼️ نمای برنامه
 
-- Windows 10 (version 1809) or later
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
-- Visual Studio 2022 with the **.NET desktop development** workload (includes WPF)
+<div align="center">
 
-### Build & Run
+### صفحهٔ جزئیات شرکت
+<img src="screenshots/company-detail.png" alt="Company Detail View" width="800"/>
+
+<br/><br/>
+
+### صفحهٔ جزئیات مخاطب
+<img src="screenshots/contact-detail.png" alt="Contact Detail View" width="800"/>
+
+</div>
+
+<br/>
+
+## 🏗️ معماری پروژه
+
+این Solution از **۵ پروژهٔ مجزا** تشکیل شده که هرکدام یک مسئولیت مشخص دارند (Separation of Concerns):
+
+```mermaid
+graph TD
+    A["🖥️ SimpleContacts<br/><small>WPF UI Layer</small>"] --> B["⚙️ SimpleContacts.Services<br/><small>Contacts / Companies / VCard / Logging</small>"]
+    A --> C["🧩 SimpleContacts.DataMapping<br/><small>Entity ↔ Model Mapper</small>"]
+    A --> D["📦 SimpleContacts.Models<br/><small>Domain Models (MVVM)</small>"]
+    B --> E["💾 SimpleContacts.Data<br/><small>EF Core DbContext + Migrations</small>"]
+    C --> D
+    C --> E
+    E --> F[("🗄️ SQLite Database")]
+
+    style A fill:#2d6cdf,color:#fff,stroke:#1b4fa8
+    style B fill:#7a5af8,color:#fff,stroke:#5a3fd6
+    style C fill:#f7941d,color:#fff,stroke:#c9730c
+    style D fill:#2ca58d,color:#fff,stroke:#1f7a65
+    style E fill:#e84855,color:#fff,stroke:#b7303c
+    style F fill:#44475a,color:#fff,stroke:#282a36
+```
+
+| لایه | پروژه | مسئولیت |
+|---|---|---|
+| **UI** | `SimpleContacts` | پروژهٔ اصلی WPF: ویوها، تم، تایتل‌بار سفارشی، سایدبار، Toast |
+| **Services** | `SimpleContacts.Services` | منطق تجاری: `ContactService`, `CompanyService`, `VCardService`, `LoggerService` |
+| **Data Mapping** | `SimpleContacts.DataMapping` | تبدیل دوطرفهٔ Entity ↔ Domain Model (`DataMapper`) |
+| **Models** | `SimpleContacts.Models` | مدل‌های دامین مبتنی بر `ObservableObject` (الگوی MVVM با CommunityToolkit.Mvvm) |
+| **Data** | `SimpleContacts.Data` | `AppDbContext`، Entityهای EF Core و Migrationها |
+
+<br/>
+
+## 🧱 پشته فناوری (Tech Stack)
+
+<div align="center">
+
+| فناوری | نسخه | کاربرد |
+|---|---|---|
+| ![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white) | `net8.0-windows10.0.19041.0` | فریم‌ورک اصلی |
+| ![WPF](https://img.shields.io/badge/WPF-UseWPF-0078D4?logo=windows) | — | رابط کاربری دسکتاپ |
+| ![EF Core](https://img.shields.io/badge/EF%20Core%20Sqlite-8.0.11-7F52A3?logo=sqlite&logoColor=white) | `8.0.11` | ORM و دسترسی به داده |
+| ![MVVM Toolkit](https://img.shields.io/badge/CommunityToolkit.Mvvm-8.3.2-5C2D91) | `8.3.2` | پیاده‌سازی الگوی MVVM (`ObservableProperty`) |
+| ![C#](https://img.shields.io/badge/LangVersion-latest-239120?logo=csharp) | `latest` | زبان برنامه‌نویسی |
+| 🗃️ SQLite | — | پایگاه‌دادهٔ محلی سبک |
+
+</div>
+
+<br/>
+
+## 📂 ساختار پوشه‌ها
+
+```
+SimpleContacts.sln
+│
+├── 📁 SimpleContacts/                         # لایه UI (WPF)
+│   └── SimpleContacts/
+│       ├── App.xaml / App.xaml.cs             # نقطهٔ ورود برنامه
+│       ├── MainWindow.xaml / .cs              # تایتل‌بار، سایدبار، میزبان صفحات، Toast
+│       ├── Assets/Icons/                      # آیکون‌های pixel-perfect (۱۷ آیکون PNG)
+│       ├── Converters/                        # StringToVisibilityConverter
+│       ├── Models/                            # مدل‌های UI (Contact, Company, PhoneEntry, ...)
+│       ├── Services/                          # AppServices, DataStore, ModelBridge
+│       ├── Themes/Theme.xaml                  # پالت رنگ و استایل کنترل‌ها
+│       └── Views/                             # HomeView · ContactsView · CompaniesView
+│                                               # ContactEditView · CompanyEditView
+│                                               # ImportView · ExportView · SettingsView
+│
+├── 📁 SimpleContacts.Services/                # لایهٔ منطق تجاری
+│   ├── SimpleContacts.Services.Contacts/      # ContactService / IContactService
+│   ├── SimpleContacts.Services.Companies/     # CompanyService / ICompanyService
+│   ├── SimpleContacts.Services.VCard/         # VCardService (Import/Export .vcf)
+│   ├── SimpleContacts.Services.Logging/       # LoggerService
+│   └── SimpleContacts.Services.Notifications/ # INotificationService
+│
+├── 📁 SimpleContacts.DataMapping/             # تبدیل Entity ↔ Model
+│   └── DataMapper.cs
+│
+├── 📁 SimpleContacts.Models/                   # مدل‌های دامین (MVVM)
+│   ├── SimpleContacts.Models/                 # Contact, Company, *Phone, *Email, *Address
+│   └── SimpleContacts.Models.Enums/           # AddressKind, EmailKind, PhoneKind, LogEntryType
+│
+└── 📁 SimpleContacts.Data/                     # لایهٔ دیتابیس
+    ├── SimpleContacts.Data/                   # AppDbContext, AppDbContextFactory
+    ├── SimpleContacts.Data.Entities/           # ContactEntity, CompanyEntity, ...
+    └── SimpleContacts.Data.Migrations/         # InitialCreate, AddCompanyNotes
+```
+
+<br/>
+
+## 🗂️ مدل داده
+
+```mermaid
+erDiagram
+    CONTACT ||--o{ CONTACT_PHONE : has
+    CONTACT ||--o{ CONTACT_EMAIL : has
+    CONTACT ||--o{ CONTACT_ADDRESS : has
+    COMPANY ||--o{ COMPANY_PHONE : has
+    COMPANY ||--o{ COMPANY_EMAIL : has
+    COMPANY ||--o{ COMPANY_ADDRESS : has
+    CONTACT }o--o{ COMPANY : "linked via CompanyContact"
+
+    CONTACT {
+        Guid Uid
+        string FirstName
+        string MiddleName
+        string LastName
+        string NickName
+        string Title
+        string Notes
+    }
+    COMPANY {
+        Guid Uid
+        string Name
+        string Description
+        string Notes
+    }
+```
+
+هر مخاطب و هر شرکت می‌توانند **چند شماره تلفن**، **چند ایمیل** و **چند آدرس** داشته باشند که هرکدام یک نوع (`Kind`) و یک پرچم **ترجیحی (`IsPreferred`)** دارند. رابطهٔ مخاطب و شرکت نیز از نوع **چند‌به‌چند** است و از طریق جدول واسط `CompanyContactEntity` مدیریت می‌شود.
+
+<br/>
+
+## 🚀 شروع سریع (Getting Started)
+
+### پیش‌نیازها
+
+- ویندوز ۱۰ یا ۱۱
+- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) به‌همراه workload مربوط به **.NET Desktop Development**
+
+> ⚠️ از آنجا که WPF مخصوص ویندوز است، این پروژه فقط باید روی ویندوز (با Visual Studio 2022 یا CLI دات‌نت روی ویندوز) اجرا شود.
+
+### نصب و اجرا
 
 ```bash
-git clone https://github.com/<your-username>/SimpleContacts.git
+# کلون کردن مخزن
+git clone https://github.com/your-username/SimpleContacts.git
 cd SimpleContacts
+
+# اجرای مستقیم با dotnet CLI
+dotnet run --project SimpleContacts/SimpleContacts.csproj
 ```
 
-1. Open `SimpleContacts.sln` in Visual Studio 2022.
-2. Make sure **SimpleContacts** is set as the startup project (it is by default).
-3. Press **F5**, or use `Build → Build Solution` followed by `Debug → Start Without Debugging`.
+یا به‌سادگی فایل `SimpleContacts.sln` را در **Visual Studio 2022** باز کرده و کلید **F5** را بزنید.
 
-On first launch, the app automatically creates its local SQLite database under `%AppData%\SimpleContacts\` — no manual setup required.
+> 🗄️ در اولین اجرا، دیتابیس SQLite به‌صورت خودکار با آخرین Migration ساخته و به‌روزرسانی می‌شود (`db.Database.Migrate()`).
 
-## Project Structure
+<br/>
 
-```
-SimpleContacts/              # WPF app — UI, views, startup
-SimpleContacts.Services/     # Business logic — contacts, companies, vCard, notifications
-SimpleContacts.Data/         # EF Core DbContext, entities, migrations
-SimpleContacts.DataMapping/  # Mapping between data entities and domain models
-SimpleContacts.Models/       # Domain/UI models (MVVM observable objects)
-```
+## 🧩 صفحات برنامه
 
-## License
+| صفحه | توضیح |
+|---|---|
+| 🏠 **Home** | داشبورد اصلی با تعداد مخاطبین/شرکت‌ها و بنر فعال‌سازی Import/Export |
+| 👤 **Contacts** | لیست مخاطبین + جستجو + جزئیات کامل (نام، تلفن، ایمیل، آدرس، شرکت‌های مرتبط) |
+| 🏢 **Companies** | لیست شرکت‌ها + جستجو + جزئیات کامل (تلفن، ایمیل، آدرس، مخاطبین مرتبط) |
+| ✏️ **Contact / Company Edit** | فرم کامل ویرایش با امکان افزودن/حذف ردیف‌های تلفن، ایمیل، آدرس و لینک‌کردن به شرکت/مخاطب |
+| 📥 **Import** | وارد کردن مخاطبین از فایل VCard |
+| 📤 **Export** | خروجی گرفتن از مخاطبین و شرکت‌ها در فرمت VCard (نسخهٔ 3.0 یا 4.0) |
+| ⚙️ **Settings** | وضعیت Import/Export، اطلاعات نسخهٔ برنامه و لینک «ثبت نظر» |
 
-Distributed under the MIT License. See [`LICENSE`](LICENSE) for details.
+<br/>
+
+## 🗺️ نقشه راه (Roadmap)
+
+- [ ] همگام‌سازی ابری (Cloud Sync)
+- [ ] پشتیبانی از چند زبان (Localization)
+- [ ] خروجی گرفتن به فرمت CSV / Excel
+- [ ] جست‌وجوی پیشرفته با فیلتر بر اساس شرکت/شهر
+- [ ] نسخهٔ Cross-platform با Avalonia / MAUI
+
+<br/>
+
+## 🤝 مشارکت (Contributing)
+
+مشارکت شما باعث خوشحالی ماست! برای مشارکت:
+
+1. مخزن را Fork کنید
+2. یک برنچ جدید بسازید (`git checkout -b feature/AmazingFeature`)
+3. تغییرات را Commit کنید (`git commit -m 'Add some AmazingFeature'`)
+4. به برنچ خود Push کنید (`git push origin feature/AmazingFeature`)
+5. یک Pull Request باز کنید
+
+<br/>
+
+## 📄 لایسنس
+
+این پروژه تحت لایسنس **MIT** منتشر شده است. برای جزئیات بیشتر فایل `LICENSE` را ببینید.
+
+<br/>
 
 ---
 
 <div align="center">
-  <sub>Built with WPF and .NET 8.</sub>
+
+ساخته‌شده با ❤️ و ☕ با استفاده از **WPF** و **.NET 8**
+
+⭐ اگر این پروژه برایتان مفید بود، یک ستاره فراموش نشود!
+
 </div>
