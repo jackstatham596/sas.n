@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/logo.png" alt="SynkroContacts logo" width="140">
+<img src="images/banner.png" alt="SynkroContacts" width="100%">
 
 # SynkroContacts
 
