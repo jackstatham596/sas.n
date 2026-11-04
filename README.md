@@ -1,225 +1,251 @@
 <div align="center">
 
-  <!-- HERO BANNER -->
-  <img src="assets/SynkroContacts-3D-Banner.png" alt="SynkroContacts Banner" width="100%" style="border-radius: 12px;" />
+  <img src="assets/SynkroContacts-3D-Banner.png" alt="SynkroContacts Banner" width="100%" />
 
   <br />
-  <br />
+
+  <h1>⚡ SynkroContacts</h1>
+  <h3><b>Next-Generation, Local-First Contact & Organization Intelligence for Windows</b></h3>
+  <p><i>Built natively with .NET 8, Fluent Dark Aesthetics, and Zero-Cloud Privacy.</i></p>
 
   <!-- BADGES -->
-  [![.NET 8](https://img.shields.io/badge/.NET%208.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-  [![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20(x64)-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://www.microsoft.com/windows)
-  [![EF Core](https://img.shields.io/badge/EF%20Core%20SQLite-8.0.11-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://learn.microsoft.com/en-us/ef/core/)
-  [![MVVM Toolkit](https://img.shields.io/badge/MVVM%20Toolkit-8.3.2-68217A?style=for-the-badge&logo=csharp&logoColor=white)](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/)
-  [![vCard](https://img.shields.io/badge/vCard%20Support-7.2.1-0284C7?style=for-the-badge)](https://github.com/FolkerKinzel/VCards)
-
-  <h1>SynkroContacts</h1>
-  <p><b>A modern, fast, and privacy-first Windows desktop application for managing contacts and companies.</b></p>
+  <p>
+    <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0"><img src="https://img.shields.io/badge/.NET%208.0-Native%20Desktop-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" alt=".NET 8" /></a>
+    <a href="https://www.microsoft.com/windows"><img src="https://img.shields.io/badge/Windows-10%20%7C%2011%20(x64)-0078D4?style=for-the-badge&logo=windows11&logoColor=white" alt="Windows" /></a>
+    <a href="https://learn.microsoft.com/en-us/ef/core/"><img src="https://img.shields.io/badge/SQLite%20%2B%20EF%20Core-Local--First-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" /></a>
+    <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-10B981?style=for-the-badge" alt="License" /></a>
+  </p>
 
   <p>
-    <a href="#-features">Features</a> •
-    <a href="#-screenshots">Screenshots</a> •
-    <a href="#-architecture--project-structure">Architecture</a> •
-    <a href="#-domain-models--schema">Data Models</a> •
-    <a href="#-getting-started">Getting Started</a>
+    <a href="#-why-synkrocontacts"><b>Why SynkroContacts?</b></a> •
+    <a href="#-visual-tour"><b>Visual Tour</b></a> •
+    <a href="#-key-capabilities"><b>Capabilities</b></a> •
+    <a href="#-system-architecture"><b>Architecture</b></a> •
+    <a href="#-quick-start"><b>Quick Start</b></a> •
+    <a href="#-roadmap"><b>Roadmap</b></a>
   </p>
+
 </div>
 
----
+<br />
 
-## 🌟 Overview
-
-**SynkroContacts** is a native Windows desktop application built on **.NET 8** following a clean, modular **MVVM** architecture. Designed with a sleek dark Fluent-inspired interface, it allows individuals and professionals to organize personal and business networks with bidirectional linking between **Contacts** and **Companies**, rich multi-field metadata, local **SQLite** persistence, and standard **vCard (`.vcf`)** import/export capabilities.
-
----
-
-## ✨ Key Features
-
-* 🎨 **Modern Fluent Dark UI:** Clean, distraction-free master-detail layout with dynamic accent theming.
-* 👥 **Comprehensive Contact Management:** Store full name components, nicknames, titles, avatars (or auto-generated initials), notes, and multiple phone numbers, emails, and physical addresses.
-* 🏢 **Company Directory & Bidirectional Linking:** Seamlessly link multiple contacts to companies and navigate between associated organizations and personnel with a single click.
-* ⭐ **Smart Primary Fields:** Automatically resolves `PrimaryPhone`, `PrimaryEmail`, and `PrimaryLocation` based on preferred flags (`IsPreferred`) or fallback priorities.
-* 🔄 **vCard (`.vcf`) Import & Export:** Powered by `FolkerKinzel.VCards` for reliable contact migration and backup.
-* 🔒 **100% Local & Private:** All data is stored locally on your machine using **SQLite** and **Entity Framework Core 8**—no cloud dependencies or telemetry.
+> [!IMPORTANT]
+> **Your Network Belongs to You—Not the Cloud.**  
+> Most modern address books force your private personal and business relationships into third-party cloud servers, bloated web wrappers, or telemetry-heavy ecosystems. **SynkroContacts** brings back the speed of native Windows software with a zero-telemetry, 100% offline-first SQLite engine.
 
 ---
 
-## 📸 Screenshots
+## 🎯 Why SynkroContacts?
 
-### 🔵 Blue Accent Theme
-| Contacts View | Companies View |
+**SynkroContacts** is more than a digital Rolodex—it is a lightweight **Personal & Corporate Relationship Manager (CRM)** engineered specifically for Windows 10 and Windows 11. 
+
+Whether you are managing ratusan of client contacts across multiple organizations, keeping track of direct vs. work lines, or maintaining detailed meeting notes, SynkroContacts links **People** and **Companies** into a unified, navigable graph.
+
+* ⚡ **Blazingly Fast Native Performance:** Powered by `.NET 8` and `CommunityToolkit.Mvvm` with source-generated bindings—no Electron, no lag, instant startup.
+* 🕸️ **Bidirectional Relationship Graph:** Link a contact to multiple companies, or view an organization's entire roster of associated personnel with one-click cross-navigation.
+* 🎨 **Crafted for Dark Mode Lovers:** Designed from the ground up with a high-contrast, distraction-free Fluent dark workspace and customizable accent themes.
+* 🔄 **Universal vCard (`v7+`) Engine:** Seamlessly migrate your address book in and out of iCloud, Google Contacts, Outlook, or mobile devices using industry-standard `.vcf` streams.
+
+---
+
+## 📸 Visual Tour
+
+SynkroContacts features a responsive **3-Pane Master-Detail Workspace**—keeping your directory, full entity profile, and contextual scratchpad notes visible simultaneously without modal pop-up fatigue.
+
+### 💠 Cyber Blue Theme
+| 👤 People & Contact Intelligence | 🏢 Organization & Company Directory |
 | :---: | :---: |
-| <img src="assets/contacts-blue.png" alt="Contacts View - Blue Theme" width="100%" /> | <img src="assets/companies-blue.png" alt="Companies View - Blue Theme" width="100%" /> |
+| <img src="assets/contacts-blue.png" alt="Contacts Blue Theme" width="100%" /> | <img src="assets/companies-blue.png" alt="Companies Blue Theme" width="100%" /> |
+| *Structured name parsing, multi-channel endpoints, and linked organizations.* | *Corporate profiles with direct lines, multiple offices, and linked staff.* |
 
-### 🟠 Gold Accent Theme
-| Contacts View | Companies View |
+### 🔶 Amber Gold Theme
+| 👤 People & Contact Intelligence | 🏢 Organization & Company Directory |
 | :---: | :---: |
-| <img src="assets/contacts-gold.png" alt="Contacts View - Gold Theme" width="100%" /> | <img src="assets/companies-gold.png" alt="Companies View - Gold Theme" width="100%" /> |
+| <img src="assets/contacts-gold.png" alt="Contacts Gold Theme" width="100%" /> | <img src="assets/companies-gold.png" alt="Companies Gold Theme" width="100%" /> |
+| *Instant real-time filtering with smart monogram avatars and inline notes.* | *Seamless bidirectional navigation between companies and contacts.* |
 
 ---
 
-## 🛠 Tech Stack & Specifications
+## ✨ Key Capabilities
 
-### System & Build Target
-| Property | Value |
-| :--- | :--- |
-| **Output Type** | `WinExe` (Windows Desktop Application) |
-| **Target Framework** | `net8.0-windows10.0.19041.0` |
-| **Minimum Windows Version** | `10.0.17763.0` (Windows 10 version 1809 or higher) |
-| **Target Platform** | `x64` |
-| **Root Namespace / Assembly** | `SynkroContacts` |
-
-### Core Libraries & NuGet Packages
-| Package | Version | Purpose |
-| :--- | :---: | :--- |
-| `Microsoft.EntityFrameworkCore.Sqlite` | `8.0.11` | Local SQLite database ORM & migrations |
-| `CommunityToolkit.Mvvm` | `8.3.2` | Modern, source-generated MVVM implementation |
-| `FolkerKinzel.VCards` | `7.2.1` | Parsing, serializing, and handling `.vcf` vCard files |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🧠 Smart Profile Resolution</h3>
+      <p>Contacts aren't flat strings. SynkroContacts breaks down identities into structured components (<code>First</code>, <code>Middle</code>, <code>Last</code>, <code>Nickname</code>, <code>Title</code>) while automatically computing monogram <b>Initials</b> and resolving <b>Primary Endpoints</b> based on your preferred flags.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏢 Multi-Entity Linking</h3>
+      <p>Consultants, executives, and freelancers often belong to more than one organization. Create many-to-many relationships between <b>Contacts</b> and <b>Companies</b> and jump between them effortlessly.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📞 Rich Multi-Channel Endpoints</h3>
+      <p>Attach unlimited phone numbers (<i>Mobile, Work, Home, Direct</i>), emails (<i>Personal, Work</i>), and physical addresses to any person or company—each with custom descriptions and priority markers.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📝 Contextual Scratchpad Notes</h3>
+      <p>Every contact and company includes a dedicated right-hand <b>Notes Panel</b>. Jot down meeting takeaways, extension numbers, or client preferences right alongside their profile.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>📦 High-Fidelity vCard I/O</h3>
+      <p>Built on top of <code>FolkerKinzel.VCards</code>, the dedicated Import & Export engine preserves structured names, multiple phone/email types, and metadata when exchanging <code>.vcf</code> files.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🔒 Local-First SQLite Persistence</h3>
+      <p>Your entire database lives inside a single, portable SQLite file in your user profile (<code>%AppData%\SynkroContacts\contacts.db</code>). Easy to back up, encrypt, or version-control.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🏗 Architecture & Project Structure
+## 🏗 System Architecture
 
-The solution is divided into **5 decoupled projects** adhering to separation of concerns:
+SynkroContacts is architected as a **5-layer modular solution**, enforcing strict separation of concerns between the Windows presentation layer, domain models, business services, and Entity Framework Core persistence.
+
+```mermaid
+graph TD
+    subgraph Presentation ["🖥️ Presentation Layer (SynkroContacts)"]
+        UI["8 Modular Views (Fluent Dark UI)"]
+        VM["ViewModels (CommunityToolkit.Mvvm 8.3)"]
+        UI <-->|Data Binding & Commands| VM
+    end
+
+    subgraph Services ["⚙️ Application & Business Services (SynkroContacts.Services)"]
+        CS["Contacts Service"]
+        CoS["Companies Service"]
+        VCS["vCard I/O Engine (FolkerKinzel)"]
+        NS["Notification & Logging Services"]
+    end
+
+    subgraph Domain ["📦 Core & Mapping"]
+        DM["Domain Models & Enums (SynkroContacts.Models)"]
+        MAP["Entity <-> Domain Mappers (SynkroContacts.DataMapping)"]
+    end
+
+    subgraph Persistence ["🗄️ Data Access Layer (SynkroContacts.Data)"]
+        EFC["EF Core 8 Context & Migrations"]
+        DB[("SQLite Local DB\n(%AppData%\\SynkroContacts\\contacts.db)")]
+        VCF[("External .vcf Files")]
+    end
+
+    VM --> CS & CoS & VCS & NS
+    CS & CoS --> MAP
+    VCS <--> VCF
+    MAP --> DM
+    CS & CoS --> EFC
+    EFC <--> DB
+```
+
+### 🧬 Relational Domain Graph
+
+```mermaid
+erDiagram
+    CONTACT ||--o{ CONTACT_PHONE : "has multiple"
+    CONTACT ||--o{ CONTACT_EMAIL : "has multiple"
+    CONTACT ||--o{ CONTACT_ADDRESS : "has multiple"
+    COMPANY ||--o{ COMPANY_PHONE : "has multiple"
+    COMPANY ||--o{ COMPANY_EMAIL : "has multiple"
+    COMPANY ||--o{ COMPANY_ADDRESS : "has multiple"
+    CONTACT }o--o{ COMPANY : "linked via Many-to-Many"
+
+    CONTACT {
+        Guid Uid PK
+        string FullName
+        string NickName
+        string Title
+        string Initials "Computed"
+        string Notes
+    }
+    COMPANY {
+        Guid Uid PK
+        string Name
+        string Description
+        string Notes
+    }
+```
+
+### 📂 Solution Structure
 
 ```text
 SynkroContacts.sln
-├── 🖥️ SynkroContacts/                  # Presentation Layer (WinExe — UI, Views, ViewModels & Startup)
-├── ⚙️ SynkroContacts.Services/         # Business Logic & Application Services
-│   ├── SynkroContacts.Services.Contacts
-│   ├── SynkroContacts.Services.Companies
-│   ├── SynkroContacts.Services.VCard
-│   ├── SynkroContacts.Services.Notifications
-│   └── SynkroContacts.Services.Logging
-├── 🗄️ SynkroContacts.Data/             # Data Access Layer (EF Core 8 & SQLite)
-│   ├── SynkroContacts.Data.Entities
-│   └── SynkroContacts.Data.Migrations
-├── 🔄 SynkroContacts.DataMapping/      # Entity <-> Domain Model Mappers
-└── 📦 SynkroContacts.Models/           # Domain Models & Enumerations
-    └── SynkroContacts.Models.Enums
+├── 🖥️ SynkroContacts/                  # WinExe UI, Navigation Shell, Themes & MVVM ViewModels
+├── ⚙️ SynkroContacts.Services/         # Business Logic, vCard Serialization, Logging & Notifications
+├── 🔄 SynkroContacts.DataMapping/      # Bidirectional Translators between EF Entities & Domain Models
+├── 🗄️ SynkroContacts.Data/             # EF Core 8 DbContext, Configurations & SQLite Migrations
+└── 📦 SynkroContacts.Models/           # Rich Domain Models, Computed Properties & Enums
 ```
 
-### Application Views (8 Core Views)
-* `HomeView` — Dashboard and quick overview
-* `ContactsView` — Master-detail contact directory with instant search
-* `ContactEditView` — Create and modify contact profiles & linked companies
-* `CompaniesView` — Master-detail company directory
-* `CompanyEditView` — Create and modify company profiles & linked contacts
-* `ImportView` — Import contacts from `.vcf` (vCard) files
-* `ExportView` — Export contacts to `.vcf` (vCard) files
-* `SettingsView` — Application preferences and theme customization
-
 ---
 
-## 📐 Domain Models & Schema
-
-<details>
-<summary><b>👤 Contact Model (Click to expand)</b></summary>
-<br />
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `Uid` | `Guid` | Unique identifier |
-| `FirstName` | `string` | Contact's first name |
-| `MiddleName` | `string` | Contact's middle name |
-| `LastName` | `string` | Contact's last name |
-| `NickName` | `string` | Contact's nickname |
-| `Title` | `string` | Job title or honorific |
-| `FullName` | `string` | Formatted full name |
-| `Image` | `string?` | Optional path to profile image |
-| `Notes` | `string` | Free-form notes |
-| `Phones` | `List<ContactPhone>` | Associated phone numbers |
-| `Emails` | `List<ContactEmail>` | Associated email addresses |
-| `Addresses` | `List<ContactAddress>` | Associated physical addresses |
-| `Companies` | `List<Company>` | Linked companies |
-
-**Computed Properties:**
-* `Initials` — Automatically generated from name components when no image is set.
-* `PrimaryPhone` / `PrimaryEmail` / `PrimaryLocation` — Resolves the first `IsPreferred` item, or falls back to the first available entry.
-* `HasNameComponents` — Indicates whether structured name fields are populated.
-
-</details>
-
-<details>
-<summary><b>🏢 Company Model (Click to expand)</b></summary>
-<br />
-
-| Field | Type | Description |
-| :--- | :--- | :--- |
-| `Uid` | `Guid` | Unique identifier |
-| `Name` | `string` | Company name |
-| `Description` | `string` | Brief company overview |
-| `Image` | `string?` | Optional path to company logo |
-| `Notes` | `string` | Free-form notes |
-| `Phones` | `List<CompanyPhone>` | Company phone numbers |
-| `Emails` | `List<CompanyEmail>` | Company email addresses |
-| `Addresses` | `List<CompanyAddress>` | Company office locations |
-| `Contacts` | `List<Contact>` | Linked contacts associated with the company |
-
-</details>
-
-<details>
-<summary><b>📞 Phone, ✉️ Email, 📍 Address & Enums (Click to expand)</b></summary>
-<br />
-
-#### `ContactPhone` / `CompanyPhone`
-* **Fields:** `Uid` (`Guid`), `Number` (`string`), `Description` (`string`), `Kind` (`PhoneKind`), `IsPreferred` (`bool`)
-* **`PhoneKind` Enum:** `Mobile`, `Home`, `Work`, `Direct`, `Other`
-
-#### `ContactEmail` / `CompanyEmail`
-* **Fields:** `Uid` (`Guid`), `Address` (`string`), `Description` (`string`), `Kind` (`EmailKind`), `IsPreferred` (`bool`)
-* **`EmailKind` Enum:** `Personal`, `Work`, `Other`
-
-#### `ContactAddress` / `CompanyAddress`
-* **Fields:** `Uid` (`Guid`), `Street` (`string`), `City` (`string`), `State` (`string`), `PostalCode` (`string`), `Country` (`string`), `Kind` (`AddressKind`), `IsPreferred` (`bool`)
-* **Computed Property:** `CityLine` (Formatted city, state, and postal code)
-* **`AddressKind` Enum:** `Home`, `Work`, `Other`
-
-</details>
-
----
-
-## 💾 Database Storage
-
-SynkroContacts uses a local **SQLite** database managed via **Entity Framework Core 8** (`AppDbContextFactory` configured with `UseSqlite`).
-
-* **Default Database Path:**
-  ```text
-  %AppData%\SynkroContacts\contacts.db
-  ```
-
----
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-* **OS:** Windows 10 (version 1809 / build 17763 or newer) or Windows 11 (`x64`)
-* **IDE:** [Visual Studio 2022](https://visualstudio.microsoft.com/) with the **.NET desktop development** workload installed
+* **Operating System:** Windows 10 (Version 1809 / Build 17763+) or Windows 11 (`x64`)
 * **SDK:** [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+* **IDE:** [Visual Studio 2022](https://visualstudio.microsoft.com/) (with the **.NET desktop development** workload)
 
-### Build & Run
+### Build & Run from Source
+
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/SynkroContacts.git
+   git clone https://github.com/YOUR_USERNAME/SynkroContacts.git
    cd SynkroContacts
    ```
-2. **Open in Visual Studio:**
-   * Double-click `SynkroContacts.sln` to open the solution in **Visual Studio 2022**.
-3. **Run the application:**
-   * Set `SynkroContacts` as the Startup Project, select the `x64` configuration, and press **`F5`** (or click **Start**).
+
+2. **Open & Run in Visual Studio 2022:**
+   * Open `SynkroContacts.sln`.
+   * Ensure the solution platform is set to **`x64`**.
+   * Press <kbd>F5</kbd> to build, apply automatic EF Core SQLite migrations, and launch the app.
+
+> [!TIP]
+> **Where is my data stored?**  
+> On first launch, SynkroContacts automatically provisions your local SQLite database at:  
+> `%AppData%\SynkroContacts\contacts.db`  
+> To back up your entire address book, simply copy this single file!
+
+---
+
+## 🗺️ Roadmap
+
+- [x] Core Contact & Company CRUD with Master-Detail UI
+- [x] Bidirectional Contact ↔ Company relational linking
+- [x] Local SQLite persistence with EF Core 8 migrations
+- [x] Multi-accent Fluent Dark Themes (Cyber Blue & Amber Gold)
+- [x] vCard (`.vcf`) parsing and serialization engine
+- [ ] Advanced tag-based filtering & smart groups
+- [ ] Encrypted database vault option (SQLCipher integration)
+- [ ] One-click CSV / JSON bulk export
+- [ ] Global Windows tray quick-search hotkey
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues) or submit a Pull Request.
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more information.
+
+<br />
 
 <div align="center">
+  <img src="assets/SynkroContacts-3D-Icon.png" alt="SynkroContacts 3D Icon" width="85" />
   <br />
-  <img src="assets/SynkroContacts-3D-Icon.png" alt="SynkroContacts Logo" width="64" />
-  <p>Built with ❤️ using .NET 8</p>
+  <b>SynkroContacts</b> — Crafted with ❤️ and C# on .NET 8
+  <br />
+  <sub>If you find this project useful, please consider giving it a ⭐ on GitHub!</sub>
 </div>
